@@ -23,7 +23,7 @@ const introBannerAnimation = (() => {
     // This function animates the intro banner and creates a delay between the text elements showing
     const _displayIntroBanner = (idx) => {
         let delay;
-        idx === 0 ? delay=1000 : delay=2000;
+        idx === 0 ? delay=1000 : delay=2000;  // Make the delay for the first animation shorter than the rest
 
         // resursive
         if (idx < introBannerText.length) {
