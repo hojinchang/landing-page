@@ -145,15 +145,19 @@ a:active {
 .header-menu {
     display: none;
     position: absolute;
+    background-color: var(--primary-colour);
+    top: 107px;
     left: 0;
     right: 0;
     z-index: 1;
     text-align: center;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4);
 }
 
 .header-menu a {
     display: block;
     color: var(--accent-colour);
+    padding: 1rem;
     font-size: 1.1rem;
     font-weight: bold;
     transition: transform 0.3s;
@@ -162,6 +166,10 @@ a:active {
 .header-menu a:hover {
     transform: scale(1.1);
     color: var(--text-colour);
+}
+
+.site-navigation.toggled .header-menu {
+    display: block;
 }
 
 .intro-banner {
@@ -200,11 +208,14 @@ a:active {
         display: none;
     }
 
-    .header-menu {
+    .site-navigation .header-menu,
+    .site-navigation.toggled .header-menu {
         display: flex;
         position: relative;
+        top: 0;
         gap: 2rem;
         margin: 0 2rem;
+        box-shadow: none;
     }
 }
 
@@ -249,21 +260,18 @@ main {
     border-radius: 1rem;
     background-color: var(--primary-colour);
     box-shadow: var(--box-shadow);
+    line-height: 2;
 }
 
 .container h1 {
     color: var(--accent-colour)
 }
 
-.about-me-container {
-    line-height: 2;
-}
-
 .projects-header .projects-selector {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 .projects-selector button {
