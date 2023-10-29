@@ -29,6 +29,7 @@
 
 :root {
     --text-colour: white;
+    --accent-colour: #03A9F3;
 }
 
 body {
@@ -109,9 +110,13 @@ a:active {
     display: block;
     background-color: transparent;
     border: none;
-    fill: white;
+    fill: var(--accent-colour);
     margin-left: 1rem;
     margin-right: 1rem;
+}
+
+.menu-toggle:hover {
+    fill: var(--text-colour);
 }
 
 .menu-toggle.toggled ul {
@@ -122,7 +127,10 @@ a:active {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    width: 100%;
+    background-color: #141516;
+    padding: 1rem;
 }
 
 .header-menu {
@@ -136,7 +144,7 @@ a:active {
 
 .header-menu a {
     display: block;
-    color: var(--text-colour);
+    color: var(--accent-colour);
     font-size: 1.1rem;
     font-weight: bold;
     transition: transform 0.3s;
@@ -144,6 +152,7 @@ a:active {
 
 .header-menu a:hover {
     transform: scale(1.2);
+    color: var(--text-colour);
 }
 
 .intro-banner {
@@ -151,9 +160,9 @@ a:active {
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    height: 100vh;
     padding: 1rem;
     gap: 2rem;
-    height: 40rem;
 }
 
 .intro-banner p {
@@ -166,11 +175,15 @@ a:active {
 }
 
 .intro-banner p:nth-child(2) {
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
 .intro-banner p:last-child {
     font-size: 2rem;
+}
+
+.my-name {
+    color: var(--accent-colour);
 }
 
 @media (min-width: 37.5em) {
@@ -202,7 +215,7 @@ a:active {
     }
     
     .intro-banner p:nth-child(2) {
-        font-size: 3rem;
+        font-size: 4rem;
     }
     
     .intro-banner p:last-child {
@@ -212,7 +225,9 @@ a:active {
 
 /* Main
 --------------------------------------------- */
-
+main {
+    background-color: #333333;
+}
 
 /* Footer
 --------------------------------------------- */
