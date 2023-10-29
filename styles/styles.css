@@ -201,6 +201,7 @@ a:active {
 
 .my-name {
     color: var(--accent-colour);
+    font-weight: 650;
 }
 
 @media (min-width: 37.5em) {

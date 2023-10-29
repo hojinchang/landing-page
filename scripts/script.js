@@ -1,3 +1,7 @@
+window.addEventListener("beforeunload", () => {
+    window.scrollTo(0, 0);
+})
+
 const introBannerAnimation = (() => {
     const introBannerText = document.querySelectorAll(".intro-banner p");
     const navigationLinks = document.querySelectorAll(".header-menu a");
@@ -101,6 +105,4 @@ const projectSelection = (() => {
     onlinestoreBtn.addEventListener("click", (e) => {
        _activateProject(e, onlineStoresProjects);
     })
-
-
 })();
