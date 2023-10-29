@@ -29,7 +29,7 @@
 
 :root {
     --text-colour: white;
-    --primary-colour: #141516;
+    --primary-colour: #222324;
     --secondary-colour: #A2A2A2;
     --accent-colour: #03A9F3;
     --header-font: 'Inter', 'Arial', sans-serif;
@@ -245,7 +245,7 @@ a:active {
 
 /* Main
 --------------------------------------------- */
-main {
+#main {
     background-color:  #A2A2A2;
     margin: 8rem 0;
 }
@@ -319,4 +319,41 @@ main {
 
 /* Footer
 --------------------------------------------- */
+#footer-section {
+    background-color: var(--primary-colour);
+    padding: 2rem;
+}
 
+#contact-me {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+#contact-me a {
+    background-color: var(--secondary-colour);
+    color: black;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    font-weight: 600;
+
+    transition: transform 0.3s ease;
+}
+
+#contact-me a:hover {
+    background-color: var(--accent-colour);
+    transform: scale(1.1);
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+@media (min-width: 37.5em) {
+    #contact-me {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
