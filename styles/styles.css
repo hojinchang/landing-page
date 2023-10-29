@@ -300,10 +300,10 @@ a:active {
 
 .projects-container {
     display: none;
+    justify-content: center;
     flex-wrap: wrap;
     margin: 2rem auto 0;
-
-    max-width: 40rem;
+    max-width: 55rem;
     gap: 3rem;
 }
 
@@ -312,8 +312,12 @@ a:active {
 }
 
 .projects-container article {
-    flex: 1 1 15rem;
+    background-color: var(--primary-colour);
+    border-radius: 0.5rem;
+    width: 20rem;
+    padding: 2rem;
     text-align: center;
+    box-shadow: var(--box-shadow);
 }
 
 
