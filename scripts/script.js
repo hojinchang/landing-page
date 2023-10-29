@@ -9,7 +9,6 @@ function displayIntroBanner(idx) {
     if (idx < introBannerText.length) {
         setTimeout(() => {
             introBannerText[idx].style.opacity = "1";
-            // introBannerText[idx].style.scale = "1";
             displayIntroBanner(idx + 1);
         }, delay);
     }

@@ -68,10 +68,6 @@ a:visited {
 	color: var(--text-colour);
 }
 
-/* a:hover,
-a:focus {
-	transform: scale(1.2);
-} */
 
 /*
 a:active {
@@ -129,7 +125,7 @@ a:active {
     background-color: rgba(0, 0, 0, 0.3);
 }
 
-.header ul {
+.header-menu {
     display: none;
     position: absolute;
     left: 0;
@@ -138,7 +134,7 @@ a:active {
     text-align: center;
 }
 
-.header a {
+.header-menu a {
     display: block;
     color: var(--text-colour);
     font-size: 1.1rem;
@@ -146,7 +142,7 @@ a:active {
     transition: transform 0.3s;
 }
 
-.header a:hover {
+.header-menu a:hover {
     transform: scale(1.2);
 }
 
@@ -182,11 +178,35 @@ a:active {
         display: none;
     }
 
-    .header ul {
+    .header-menu {
         display: flex;
         position: relative;
         gap: 2rem;
         margin: 0 2rem;
+    }
+}
+
+@media (min-width: 50em) {
+    .header-menu a {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 62.5em) {
+    .header-menu a {
+        font-size: 1.85rem;
+    }
+
+    .intro-banner p:first-child {
+        font-size: 5rem;
+    }
+    
+    .intro-banner p:nth-child(2) {
+        font-size: 3rem;
+    }
+    
+    .intro-banner p:last-child {
+        font-size: 3rem;
     }
 }
 
