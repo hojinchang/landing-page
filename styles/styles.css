@@ -267,6 +267,11 @@ main {
     color: var(--accent-colour)
 }
 
+
+.projects-header {
+    max-width: 35rem;
+}
+
 .projects-header .projects-selector {
     display: flex;
     flex-wrap: wrap;
@@ -292,6 +297,25 @@ main {
     text-underline-offset: 1em;
     text-decoration-color: var(--accent-colour);
 }
+
+.projects-container {
+    display: none;
+    flex-wrap: wrap;
+    margin: 2rem auto 0;
+
+    max-width: 40rem;
+    gap: 3rem;
+}
+
+.html-css-projects {
+    display: flex;
+}
+
+.projects-container article {
+    flex: 1 1 15rem;
+    text-align: center;
+}
+
 
 /* Footer
 --------------------------------------------- */

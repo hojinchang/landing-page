@@ -19,48 +19,58 @@ const introBannerAnimation = (() => {
 
 
 const projectSelection = (() => {
-    const htmlCssProjects = document.getElementById("html-css");
-    const javascriptProjects = document.getElementById("javascript");
-    const wordpressProjects = document.getElementById("wordpress");
-    const onlinestoreProjects = document.getElementById("online-store");
+    const htmlCssBtn = document.getElementById("html-css");
+    const javascriptBtn = document.getElementById("javascript");
+    const wordpressBtn = document.getElementById("wordpress");
+    const onlinestoreBtn = document.getElementById("online-store");
 
     const projectSelectorBtns = document.querySelectorAll(".project-selector-btn");
-    
 
-    const active = (e) => {
+    const projectContainers = document.querySelectorAll(".projects-container");
+    const htmlCssProjects = document.querySelector(".html-css-projects");
+    const javascriptProjects = document.querySelector(".javascript-projects");
+    const wordpressProjects = document.querySelector(".wordpress-projects");
+    const onlineStoresProjects = document.querySelector(".online-stores");
+    
+    // Checks if the project selection is active
+    const _active = (e) => {
         return e.target.classList.contains("active");
     }
 
-    const setActive = (e) => {
+    // Sets the selected project to active mode (display mode)
+    const _setActive = (e) => {
         projectSelectorBtns.forEach(button => {
             button.classList.remove("active");
+        })
+
+        projectContainers.forEach(container => {
+            container.style.display = "none";
         })
 
         e.target.classList.add("active");
     }
 
-    htmlCssProjects.addEventListener("click", (e) => {
-        if (!active(e)) {
-            setActive(e);
+    const _activateProject = (e, project) => {
+        if (!_active(e)) {
+            _setActive(e);
+            project.style.display = "flex";
         }
+    }
+
+    htmlCssBtn.addEventListener("click", (e) => {
+        _activateProject(e, htmlCssProjects);
     })
 
-    javascriptProjects.addEventListener("click", (e) => {
-        if(!active(e)) {
-            setActive(e);
-        }
+    javascriptBtn.addEventListener("click", (e) => {
+        _activateProject(e, javascriptProjects);
     })
 
-    wordpressProjects.addEventListener("click", (e) => {
-        if(!active(e)) {
-            setActive(e);
-        }
+    wordpressBtn.addEventListener("click", (e) => {
+       _activateProject(e, wordpressProjects);
     })
 
-    onlinestoreProjects.addEventListener("click", (e) => {
-        if(!active(e)) {
-            setActive(e);
-        }
+    onlinestoreBtn.addEventListener("click", (e) => {
+       _activateProject(e, onlineStoresProjects);
     })
 
 
