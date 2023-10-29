@@ -28,17 +28,16 @@
 }
 
 :root {
-    --text-colour: black;
+    --text-colour: white;
 }
 
 body {
 	font-size: 1rem;
     font-family: 'Roboto', 'Noto Sans Mono', monospace, sans-serif;
-    color: gray;
-    /* line-height: 2; */
+    color: white;
 }
 
-h1,
+/* h1,
 h2,
 h3,
 h4,
@@ -49,7 +48,7 @@ h6 {
 
 p {
 	margin: 0 0 1.5rem;
-}
+} */
 
 
 /* Elements
@@ -96,7 +95,6 @@ a:active {
     display: flex;
     flex-direction: column;
     justify-content:flex-start;
-    padding: 1rem;
 
     background-image: url('../images/black-background.jpg');
     background-position: center;
@@ -108,6 +106,7 @@ a:active {
 .logo {
     width: 75px;
     height: auto;
+    margin-left: 1rem;
 }
 
 .menu-toggle {
@@ -116,6 +115,7 @@ a:active {
     border: none;
     fill: white;
     margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 .menu-toggle.toggled ul {
@@ -126,6 +126,7 @@ a:active {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 .header ul {
@@ -139,7 +140,8 @@ a:active {
 
 .header a {
     display: block;
-    font-size: 2rem;
+    color: var(--text-colour);
+    font-size: 1.1rem;
     font-weight: bold;
     transition: transform 0.3s;
 }
@@ -152,32 +154,30 @@ a:active {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-
-    position: relative;
-    top: 20%;
+    text-align: center;
+    padding: 1rem;
+    gap: 2rem;
+    height: 40rem;
 }
 
 .intro-banner p {
     opacity: 0;
-    transform: translateY(75px);
-    transition: opacity 2.5s ease, transform 2.5s ease;
+    transition: opacity 2.5s ease-in-out;
 }
 
 .intro-banner p:first-child {
-    font-size: 5rem;
+    font-size: 4rem;
 }
 
 .intro-banner p:nth-child(2) {
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
 .intro-banner p:last-child {
     font-size: 2rem;
 }
 
-
-@media (min-width: 37.25em) {
+@media (min-width: 37.5em) {
     .menu-toggle {
         display: none;
     }
@@ -185,9 +185,7 @@ a:active {
     .header ul {
         display: flex;
         position: relative;
-    }
-
-    .header a {
+        gap: 2rem;
         margin: 0 2rem;
     }
 }
