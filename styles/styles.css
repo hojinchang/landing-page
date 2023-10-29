@@ -209,7 +209,7 @@ a:active {
 
 @media (min-width: 62.5em) {
     .header-menu a {
-        font-size: 1.85rem;
+        font-size: 1.6rem;
     }
 
     .intro-banner p:first-child {
