@@ -12,7 +12,7 @@
         <script src="scripts/script.js" defer></script>
     </head>
     <body>
-        <header class="header">
+        <header id="header">
             <nav>
                 <img class="logo" src="images/logo.svg" alt="Hojin Chang's logo">
 
@@ -24,8 +24,8 @@
 				</button>
 
                 <ul class="header-menu">
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Projects</a></li>
+                    <li><a href="#about-me">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
             </nav>
@@ -38,16 +38,27 @@
         </header>
 
         <main>
-            <section class="about-me">
-                <div class="about-me-container">
+            <section id="about-me">
+                <div class="about-me-container container">
                     <h1>About Me</h1>
                     <p>
-                        Hello! My name is Hojin Chang. I graduated in 2021 with a degree in 
-                        Mechatronic Systems Engineering, and have two years of experience 
+                        Hello, my name is Hojin Chang! I graduated in 2021 with a degree in 
+                        Mechatronic Systems Engineering and have two years of experience 
                         working as a Deep Learning Engineer. Now, I'm studying and looking to shift
                         careers careers towards Full-Stack Web Development. Some of my interests 
-                        include video gaming, badminton, and playing the bass guitar.
+                        include video games, badminton, and playing the bass guitar.
                     </p>
+                </div>
+            </section>
+            <section id="projects">
+                <div class="projects-header container">
+                    <h1>Projects</h1>
+                    <div class="projects-selector">
+                        <button id="html-css" class="project-selector-btn active">HTML/CSS</button>
+                        <button id="javascript" class="project-selector-btn">JavaScript</button>
+                        <button id="wordpress" class="project-selector-btn">WordPress</button>
+                        <button id="online-store" class="project-selector-btn">Online Stores</button>
+                    </div>
                 </div>
             </section>
         </main>
