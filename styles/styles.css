@@ -29,30 +29,28 @@
 
 :root {
     --text-colour: white;
+    --primary-colour: #141516;
+    --secondary-colour: #A2A2A2;
     --accent-colour: #03A9F3;
     --header-font: 'Inter', 'Arial', sans-serif;
     --text-font: 'Montserrat', 'Arial', sans-serif;
+    --box-shadow: 0 0 1rem rgba(0, 0, 0, 0.8);
 }
 
 body {
 	font-size: 1rem;
     font-family: var(--text-font);
     color: white;
+    background-color: var(--secondary-colour);
 }
 
-/* h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	margin: 0.5em 0;
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 1rem;
 }
 
 p {
-	margin: 0 0 1.5rem;
-} */
-
+    font-size: 1.1rem;
+}
 
 /* Elements
 --------------------------------------------- */
@@ -131,7 +129,7 @@ a:active {
     align-items: center;
     position: fixed;
     width: 100%;
-    background-color: #141516;
+    background-color: var(--primary-colour);
     padding: 1rem 0;
 }
 
@@ -230,6 +228,30 @@ a:active {
 main {
     background-color:  #A2A2A2;
 }
+
+.about-me {
+    padding: 2rem;
+}
+
+.about-me-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--primary-colour);
+    line-height: 2;
+    max-width: 50rem;
+    margin: 5rem auto 0;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.8);
+}
+
+.about-me-container h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--accent-colour)
+}
+
 
 /* Footer
 --------------------------------------------- */
