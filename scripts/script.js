@@ -1,8 +1,27 @@
 const introBannerAnimation = (() => {
     const introBannerText = document.querySelectorAll(".intro-banner p");
+    const navigationLinks = document.querySelectorAll(".header-menu a");
+
+    // Disables the navigation links
+    const _disableNavLinks = () => {
+        const _disableNavigation = (e) => {
+            e.preventDefault();
+        }
+
+        navigationLinks.forEach(nav => {
+            nav.addEventListener("click", _disableNavigation)
+        })
+    }
+
+    // Enables the navigation links
+    const _enableNavLinks = () => {
+        navigationLinks.forEach(nav => {
+            nav.removeEventListener("click", _disableNavLinks);
+        })
+    }
 
     // This function animates the intro banner and creates a delay between the text elements showing
-    const displayIntroBanner = (idx) => {
+    const _displayIntroBanner = (idx) => {
         let delay;
         idx === 0 ? delay=1000 : delay=2000;
 
@@ -10,11 +29,21 @@ const introBannerAnimation = (() => {
         if (idx < introBannerText.length) {
             setTimeout(() => {
                 introBannerText[idx].style.opacity = "1";
-                displayIntroBanner(idx + 1);
+                _displayIntroBanner(idx + 1);
+
+                if (idx === introBannerText.length-1) {
+                    // Enable scrolling and navigation links after the last animation is finsihed
+                    document.body.style.overflow = "auto";
+                    _enableNavLinks();
+                }
             }, delay);
         }
     }
-    displayIntroBanner(0);
+
+    // Make website unscrollable while animation is playing
+    document.body.style.overflow = "hidden";
+    _disableNavLinks();
+    _displayIntroBanner(0);
 })();
 
 
