@@ -30,11 +30,13 @@
 :root {
     --text-colour: white;
     --accent-colour: #03A9F3;
+    --header-font: 'Inter', 'Arial', sans-serif;
+    --text-font: 'Montserrat', 'Arial', sans-serif;
 }
 
 body {
 	font-size: 1rem;
-    font-family: 'Roboto', 'Noto Sans Mono', monospace, sans-serif;
+    font-family: var(--text-font);
     color: white;
 }
 
@@ -103,7 +105,7 @@ a:active {
 .logo {
     width: 75px;
     height: auto;
-    margin-left: 1rem;
+    margin-left: 2rem;
 }
 
 .menu-toggle {
@@ -111,8 +113,8 @@ a:active {
     background-color: transparent;
     border: none;
     fill: var(--accent-colour);
-    margin-left: 1rem;
-    margin-right: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
 }
 
 .menu-toggle:hover {
@@ -130,7 +132,7 @@ a:active {
     position: fixed;
     width: 100%;
     background-color: #141516;
-    padding: 1rem;
+    padding: 1rem 0;
 }
 
 .header-menu {
@@ -226,7 +228,7 @@ a:active {
 /* Main
 --------------------------------------------- */
 main {
-    background-color: #333333;
+    background-color:  #A2A2A2;
 }
 
 /* Footer
