@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="quarter-note" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 102.31 299.11">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #46d400;
+        stroke-width: 0px;
+      }
+    </style>
+  </defs>
+  <path id="quarter-note-2" data-name="quarter-note" class="cls-1" d="m17.32,295.23c5.18,2.33,11.91,3.83,20.63,3.88,39.78-.44,62.52-32,64.37-52.67V0h-10v220.96s-11.63-8.74-27.41-8.67c-15.78.07-60.89,10.59-64.85,54.26,0,0-1.93,20.04,17.26,28.68"/>
+</svg>

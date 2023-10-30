@@ -32,6 +32,8 @@
     --primary-colour: #222324;
     --secondary-colour: #A2A2A2;
     --accent-colour: #03A9F3;
+    --korea-red: #CD2E3A;
+    --korea-blue: #0047A0;
     --header-font: 'Inter', 'Arial', sans-serif;
     --text-font: 'Montserrat', 'Arial', sans-serif;
     --box-shadow: 0 0 1rem rgba(0, 0, 0, 0.8);
@@ -136,10 +138,9 @@ a:active {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* position: fixed; */
-    /* width: 100%; */
     background-color: var(--primary-colour);
     padding: 1rem 0;
+    z-index: 2;
 }
 
 .header-menu {
@@ -181,6 +182,7 @@ a:active {
     height: 100vh;
     padding: 1rem;
     gap: 2rem;
+    z-index: 2;
 }
 
 .intro-banner p {
@@ -218,6 +220,7 @@ a:active {
     margin: 0 auto;
     transition: opacity 1s ease-in-out;
     animation: 2s bounce infinite normal;
+    z-index: 2;
 }
 
 @keyframes bounce {
@@ -226,6 +229,75 @@ a:active {
     60% {transform: translateY(-15px);} 
 }
 
+
+#musical-notes {
+    position: absolute;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+
+.musical-note {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    animation: rain-notes 6s ease-in-out -2s infinite;
+    transform-origin: left top;
+    z-index: 1;
+}
+
+.musical-note:nth-child(even) svg {
+    fill: var(--korea-red);
+}
+
+.musical-note:nth-child(odd) svg {
+    fill: var(--korea-blue);
+}
+
+.musical-note:nth-child(1) {
+    left: 10%; animation-delay: 0;
+}
+.musical-note:nth-child(2) {
+    left: 20%; animation-delay: -5s;
+}
+.musical-note:nth-child(3) {
+    left: 30%; animation-delay: -3s;
+}
+.musical-note:nth-child(4) {
+    left: 40%; animation-delay: -2.5s;
+}
+.musical-note:nth-child(5) {
+    left: 50%; animation-delay: -4s;
+}
+.musical-note:nth-child(6) {
+    left: 60%; animation-delay: -6s;
+}
+.musical-note:nth-child(7) {
+    left: 70%; animation-delay: -1.5s;
+}
+.musical-note:nth-child(8) {
+    left: 80%; animation-delay: -2s;
+}
+.musical-note:nth-child(9) {
+    left: 90%; animation-delay: -3.5s;
+}
+.musical-note:nth-child(10) {
+    left: 100%; animation-delay: -2.5s;
+}
+.musical-note:nth-child(11) {
+    left: 40%; animation-delay: -1s;
+}
+.musical-note:nth-child(12) {
+    left: 60%; animation-delay: -3.25s;
+}
+
+@keyframes rain-notes {
+    0% { transform: rotateZ(15deg) rotateY(0deg) translate(0, 0); }
+    25% { transform: rotateZ(5deg) rotateY(360deg) translate(0vw, 20vh); }
+    50% { transform: rotateZ(15deg) rotateY(720deg) translate(5vw, 60vh); }
+    75% { transform: rotateZ(5deg) rotateY(1080deg) translate(0vw, 80vh); }
+    100% { transform: rotateZ(15deg) rotateY(1440deg) translate(10vw, 96vh); }
+}
 
 @media (min-width: 37.5em) {
     .menu-toggle {
@@ -306,6 +378,7 @@ a:active {
 }
 
 #projects-section {
+    overflow: hidden;
     margin-top: 3rem;
 }
 
@@ -385,7 +458,7 @@ a:active {
 
 @keyframes swoop-left {
     0% {
-        transform: translateX(-60%);
+        transform: translateX(-40%);
         opacity: 0;
     }
     100% {
@@ -396,7 +469,7 @@ a:active {
 
 @keyframes swoop-right {
     0% {
-        transform: translateX(60%);
+        transform: translateX(40%);
         opacity: 0;
     }
     100% {

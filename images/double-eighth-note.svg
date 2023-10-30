@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="double-eighth-note" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 351.11 388.97">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #9cff7f;
+        stroke-width: 0px;
+      }
+    </style>
+  </defs>
+  <path id="double-eighth-note-2" data-name="double-eighth-note" class="cls-1" d="m351.11,266V0L110.19,52.72v241.13s-11.67-8.3-34.33-7.41S.59,307.63,0,353.7c0,0-.74,35.85,47.56,35.26,36.74-.52,78.52-28.74,78.89-69.78V109.19l208.44-45.78v177.11s-11.48-8.15-29.78-7.78c0,0-54.15-1.19-77.26,48.48,0,0-16.67,37.44,23.11,51,42.67,11.56,99.19-16.22,100.15-66.22Z"/>
+</svg>

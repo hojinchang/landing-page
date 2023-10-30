@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="dotted-quarter-note" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129.62 321.93">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #09ff00;
+        stroke-width: 0px;
+      }
+    </style>
+  </defs>
+  <g id="dotted-quarter-note-2" data-name="dotted-quarter-note">
+    <path class="cls-1" d="m91.71,269.57V0h-7.09v250.17s-8.63-12.81-35.37-8.3S4.14,270.91,1.02,284.83s0,31.56,21.48,36.3c27.15,5.11,66.48-14.44,69.2-51.56Z"/>
+    <circle class="cls-1" cx="119.99" cy="286.46" r="9.63"/>
+  </g>
+</svg>
