@@ -3,7 +3,7 @@ window.addEventListener("beforeunload", () => {
 })
 
 const introBannerAnimation = (() => {
-    const introBannerText = document.querySelectorAll(".intro-banner p");
+    const introBannerElements = document.querySelectorAll(".intro-banner > *");
     const navigationLinks = document.querySelectorAll(".header-menu a");
 
     // Disables the navigation links
@@ -30,12 +30,12 @@ const introBannerAnimation = (() => {
         idx === 0 ? delay=1000 : delay=2000;  // Make the delay for the first animation shorter than the rest
 
         // resursive
-        if (idx < introBannerText.length) {
+        if (idx < introBannerElements.length) {
             setTimeout(() => {
-                introBannerText[idx].style.opacity = "1";
+                introBannerElements[idx].style.opacity = "1";
                 _displayIntroBanner(idx + 1);
 
-                if (idx === introBannerText.length-1) {
+                if (idx === introBannerElements.length-1) {
                     // Enable scrolling and navigation links after the last animation is finsihed
                     document.body.style.overflow = "auto";
                     _enableNavLinks();
@@ -106,3 +106,9 @@ const projectSelection = (() => {
        _activateProject(e, onlineStoresProjects);
     })
 })();
+
+
+const navDownBtn = document.querySelector(".nav-down-btn");
+navDownBtn.addEventListener("click", () => {
+    window.scrollTo();
+})
