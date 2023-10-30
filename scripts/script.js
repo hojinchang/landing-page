@@ -2,53 +2,53 @@ window.addEventListener("beforeunload", () => {
     window.scrollTo(0, 0);
 })
 
-// const introBannerAnimation = (() => {
-//     const introBannerElements = document.querySelectorAll(".intro-banner > *");
-//     const navigationLinks = document.querySelectorAll(".header-menu a");
+const introBannerAnimation = (() => {
+    const introBannerElements = document.querySelectorAll(".intro-banner > *");
+    const navigationLinks = document.querySelectorAll(".header-menu a");
 
-//     // Disables the navigation links
-//     const _disableNavLinks = () => {
-//         const _disableNavigation = (e) => {
-//             e.preventDefault();
-//         }
+    // Disables the navigation links
+    const _disableNavLinks = () => {
+        const _disableNavigation = (e) => {
+            e.preventDefault();
+        }
 
-//         navigationLinks.forEach(nav => {
-//             nav.addEventListener("click", _disableNavigation)
-//         })
-//     }
+        navigationLinks.forEach(nav => {
+            nav.addEventListener("click", _disableNavigation)
+        })
+    }
 
-//     // Enables the navigation links
-//     const _enableNavLinks = () => {
-//         navigationLinks.forEach(nav => {
-//             nav.removeEventListener("click", _disableNavLinks);
-//         })
-//     }
+    // Enables the navigation links
+    const _enableNavLinks = () => {
+        navigationLinks.forEach(nav => {
+            nav.removeEventListener("click", _disableNavLinks);
+        })
+    }
 
-//     // This function animates the intro banner and creates a delay between the text elements showing
-//     const _displayIntroBanner = (idx) => {
-//         let delay;
-//         idx === 0 ? delay=1000 : delay=2000;  // Make the delay for the first animation shorter than the rest
+    // This function animates the intro banner and creates a delay between the text elements showing
+    const _displayIntroBanner = (idx) => {
+        let delay;
+        idx === 0 ? delay=1000 : delay=2000;  // Make the delay for the first animation shorter than the rest
 
-//         // resursive
-//         if (idx < introBannerElements.length) {
-//             setTimeout(() => {
-//                 introBannerElements[idx].style.opacity = "1";
-//                 _displayIntroBanner(idx + 1);
+        // resursive
+        if (idx < introBannerElements.length) {
+            setTimeout(() => {
+                introBannerElements[idx].style.opacity = "1";
+                _displayIntroBanner(idx + 1);
 
-//                 if (idx === introBannerElements.length-1) {
-//                     // Enable scrolling and navigation links after the last animation is finsihed
-//                     document.body.style.overflow = "auto";
-//                     _enableNavLinks();
-//                 }
-//             }, delay);
-//         }
-//     }
+                if (idx === introBannerElements.length-1) {
+                    // Enable scrolling and navigation links after the last animation is finsihed
+                    document.body.style.overflow = "auto";
+                    _enableNavLinks();
+                }
+            }, delay);
+        }
+    }
 
-//     // Make website unscrollable while animation is playing
-//     document.body.style.overflow = "hidden";
-//     _disableNavLinks();
-//     _displayIntroBanner(0);
-// })();
+    // Make website unscrollable while animation is playing
+    document.body.style.overflow = "hidden";
+    _disableNavLinks();
+    _displayIntroBanner(0);
+})();
 
 
 const projectSelection = (() => {
