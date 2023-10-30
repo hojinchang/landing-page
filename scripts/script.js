@@ -8,12 +8,12 @@ const introBannerAnimation = (() => {
     const introBannerElements = document.querySelectorAll(".intro-banner > *");
     const navigationLinks = document.querySelectorAll(".header-menu a");
 
+    const _disableNavigation = (e) => {
+        e.preventDefault();
+    }
+
     // Disables the navigation links
     const _disableNavLinks = () => {
-        const _disableNavigation = (e) => {
-            e.preventDefault();
-        }
-
         navigationLinks.forEach(nav => {
             nav.addEventListener("click", _disableNavigation)
         })
@@ -22,7 +22,7 @@ const introBannerAnimation = (() => {
     // Enables the navigation links
     const _enableNavLinks = () => {
         navigationLinks.forEach(nav => {
-            nav.removeEventListener("click", _disableNavLinks);
+            nav.removeEventListener("click", _disableNavigation);
         })
     }
 
@@ -37,10 +37,11 @@ const introBannerAnimation = (() => {
                 introBannerElements[idx].style.opacity = "1";
                 _displayIntroBanner(idx + 1);
 
-                if (idx === introBannerElements.length-1) {
+                if (idx === (introBannerElements.length - 1)) {
                     // Enable scrolling and navigation links after the last animation is finsihed
                     document.body.style.overflow = "auto";
                     _enableNavLinks();
+                    console.log("YESSIR")
                 }
             }, delay);
         }
@@ -50,9 +51,10 @@ const introBannerAnimation = (() => {
     document.body.style.overflow = "hidden";
     _disableNavLinks();
     _displayIntroBanner(0);
+
 })();
 
-// 
+// Scroll to About Me section if clicked
 const navDownBtn = document.querySelector(".nav-down-btn");
 navDownBtn.addEventListener("click", () => {
     window.scrollTo();
@@ -141,6 +143,7 @@ const projectSelection = (() => {
         _swoopDirection(e);
         _activateProject(e, onlineStoresProjects);
     })
+
 })();
 
 
