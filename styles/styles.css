@@ -421,7 +421,7 @@ a:active {
 }
 
 #contact-me a {
-    background-color: var(--accent-colour);
+    background-color: var(--secondary-colour);
     color: black;
     padding: 1rem;
     border-radius: 0.25rem;
@@ -431,7 +431,7 @@ a:active {
 }
 
 #contact-me a:hover {
-    background-color: var(--secondary-colour);
+    background-color: var(--accent-colour);
     transform: scale(1.1);
 }
 
