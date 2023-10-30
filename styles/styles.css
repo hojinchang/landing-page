@@ -238,8 +238,8 @@ a:active {
 }
 
 .musical-note {
-    width: 15px;
-    height: 15px;
+    /* width: 15px;
+    height: 15px; */
     position: absolute;
     animation: rain-notes 6s ease-in-out -2s infinite;
     transform-origin: left top;
