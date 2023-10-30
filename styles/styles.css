@@ -375,6 +375,36 @@ a:active {
     font-size: 0.9rem;
 }
 
+.projects-container.swoop-left {
+    animation: 1s swoop-left 1 normal ease-in-out;
+}
+
+.projects-container.swoop-right {
+    animation: 1s swoop-right 1 normal ease-in-out;
+}
+
+@keyframes swoop-left {
+    0% {
+        transform: translateX(-60%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes swoop-right {
+    0% {
+        transform: translateX(60%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
 
 /* Footer
 --------------------------------------------- */
