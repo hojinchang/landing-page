@@ -238,8 +238,6 @@ a:active {
 }
 
 .musical-note {
-    /* width: 15px;
-    height: 15px; */
     position: absolute;
     animation: rain-notes 6s ease-in-out -2s infinite;
     transform-origin: left top;
@@ -264,7 +262,7 @@ a:active {
     left: 30%; animation-delay: -3s;
 }
 .musical-note:nth-child(4) {
-    left: 40%; animation-delay: -2.5s;
+    left: 40%; animation-delay: -2.35s;
 }
 .musical-note:nth-child(5) {
     left: 50%; animation-delay: -4s;
@@ -282,7 +280,7 @@ a:active {
     left: 90%; animation-delay: -3.5s;
 }
 .musical-note:nth-child(10) {
-    left: 100%; animation-delay: -2.5s;
+    left: 100%; animation-delay: -2.75s;
 }
 .musical-note:nth-child(11) {
     left: 40%; animation-delay: -1s;
