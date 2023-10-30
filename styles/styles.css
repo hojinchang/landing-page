@@ -214,7 +214,7 @@ a:active {
     cursor: pointer;
     opacity: 0;
     position: absolute;
-    bottom: 55px;
+    bottom: 3%;
     margin: 0 auto;
     transition: opacity 1s ease-in-out;
     animation: 2s bounce infinite normal;
@@ -262,8 +262,22 @@ a:active {
         font-size: 4rem;
     }
     
-    .intro-banner p:last-child {
+    .intro-banner p:nth-child(3) {
         font-size: 3rem;
+    }
+}
+
+@media (max-height: 43.25em) {
+    .intro-banner p:first-child {
+        font-size: 3rem;
+    }
+    
+    .intro-banner p:nth-child(2) {
+        font-size: 2rem;
+    }
+    
+    .intro-banner p:nth-child(3) {
+        font-size: 1rem;
     }
 }
 
@@ -363,7 +377,7 @@ a:active {
 }
 
 #contact-me a {
-    background-color: var(--secondary-colour);
+    background-color: var(--accent-colour);
     color: black;
     padding: 1rem;
     border-radius: 0.25rem;
@@ -373,7 +387,7 @@ a:active {
 }
 
 #contact-me a:hover {
-    background-color: var(--accent-colour);
+    background-color: var(--secondary-colour);
     transform: scale(1.1);
 }
 
