@@ -316,6 +316,7 @@ a:active {
 .projects-header .projects-selector {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 2rem;
     margin-top: 1rem;
 }
@@ -344,7 +345,7 @@ a:active {
     justify-content: center;
     flex-wrap: wrap;
     margin: 3rem auto 0;
-    max-width: 55rem;
+    max-width: 65rem;
     gap: 3rem;
 }
 
@@ -353,12 +354,25 @@ a:active {
 }
 
 .projects-container article {
+    display: flex;
+    flex: 1 1 20rem;
+    flex-direction: column;
+    justify-content: space-between;
     background-color: var(--primary-colour);
+    line-height: 1.5;
     border-radius: 0.5rem;
-    width: 20rem;
+    max-width: 25rem;
     padding: 2rem;
     text-align: center;
     box-shadow: var(--box-shadow);
+}
+
+.projects-container article h2 {
+    font-size: 1.2rem;
+}
+
+.projects-container article p {
+    font-size: 0.9rem;
 }
 
 
