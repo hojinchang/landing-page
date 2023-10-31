@@ -431,20 +431,27 @@ a:active {
     flex: 1 1 20rem;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
     background-color: var(--primary-colour);
     line-height: 1.5;
     border-radius: 0.5rem;
-    max-width: 25rem;
+    max-width: 15rem;
     padding: 2rem;
     text-align: center;
     box-shadow: var(--box-shadow);
 }
 
 .projects-container article h2 {
+    color: var(--accent-colour);
     font-size: 1.2rem;
 }
 
+.projects-container article img {
+    max-width: 15rem;
+}
+
 .projects-container article p {
+    margin-top: 1rem;
     font-size: 0.9rem;
 }
 
