@@ -80,13 +80,6 @@ a:visited {
 	color: var(--text-colour);
 }
 
-
-/*
-a:active {
-	
-} */
-
-
 /*--------------------------------------------------------------
 # Layout
 --------------------------------------------------------------*/
@@ -130,7 +123,7 @@ a:active {
     fill: var(--text-colour);
 }
 
-.menu-toggle.toggled ul {
+.menu-toggle.toggled .nav-menu {
     display: block;
 }
 
@@ -143,19 +136,19 @@ a:active {
     z-index: 2;
 }
 
-.header-menu {
+.nav-menu {
     display: none;
     position: absolute;
     background-color: var(--primary-colour);
     top: 107px;
     left: 0;
     right: 0;
-    z-index: 1;
+    z-index: 2;
     text-align: center;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4);
 }
 
-.header-menu a {
+.nav-menu a {
     display: block;
     color: var(--accent-colour);
     padding: 1rem;
@@ -165,12 +158,12 @@ a:active {
     transition: transform 0.3s;
 }
 
-.header-menu a:hover {
+.nav-menu a:hover {
     transform: scale(1.1);
     color: var(--text-colour);
 }
 
-.site-navigation.toggled .header-menu {
+.site-navigation.toggled .nav-menu {
     display: block;
 }
 
@@ -305,25 +298,26 @@ a:active {
         display: none;
     }
 
-    .site-navigation .header-menu,
-    .site-navigation.toggled .header-menu {
+    .site-navigation .nav-menu,
+    .site-navigation.toggled .nav-menu {
         display: flex;
         position: relative;
         top: 0;
         gap: 2rem;
         margin: 0 2rem;
         box-shadow: none;
+        /* z-index: 2; */
     }
 }
 
 @media (min-width: 50em) {
-    .header-menu a {
+    .nav-menu a {
         font-size: 1.5rem;
     }
 }
 
 @media (min-width: 62.5em) {
-    .header-menu a {
+    .nav-menu a {
         font-size: 1.6rem;
     }
 

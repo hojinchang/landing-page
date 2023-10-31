@@ -6,7 +6,7 @@ window.addEventListener("beforeunload", () => {
 
 const introBannerAnimation = (() => {
     const introBannerElements = document.querySelectorAll(".intro-banner > *");
-    const navigationLinks = document.querySelectorAll(".header-menu a");
+    const navigationLinks = document.querySelectorAll(".nav-menu a");
 
     const _disableNavigation = (e) => {
         e.preventDefault();
