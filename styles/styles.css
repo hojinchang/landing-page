@@ -426,7 +426,7 @@ a:active {
     display: flex;
 }
 
-.projects-container article {
+.project-article {
     display: flex;
     flex: 1 1 20rem;
     flex-direction: column;
@@ -439,21 +439,50 @@ a:active {
     padding: 2rem;
     text-align: center;
     box-shadow: var(--box-shadow);
+
+    position: relative;
+    overflow: hidden;
 }
 
-.projects-container article h2 {
+.project-article h2 {
     color: var(--accent-colour);
     font-size: 1.2rem;
 }
 
-.projects-container article img {
+.project-article img {
     max-width: 15rem;
 }
 
-.projects-container article p {
+.project-article p {
     margin-top: 1rem;
     font-size: 0.9rem;
 }
+
+.project-article .project-overlay {
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    transform: translateY(-100%);
+
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.project-overlay p {
+    font-size: 1.2rem;
+}
+
+.project-article:hover .project-overlay{
+    transform: translateY(0);
+    opacity:  1;
+}
+
 
 .projects-container.swoop-left {
     animation: 1s swoop-left 1 normal ease-in-out;
@@ -482,6 +511,12 @@ a:active {
     100% {
         transform: translateX(0);
         opacity: 1;
+    }
+}
+
+@media (min-width: 21em) {
+    .project-overlay p {
+        font-size: 1.5rem;
     }
 }
 
