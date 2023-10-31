@@ -29,7 +29,7 @@ const introBannerAnimation = (() => {
     // This function animates the intro banner and creates a delay between the text elements showing
     const _displayIntroBanner = (idx) => {
         let delay;
-        idx === 0 ? delay=1000 : delay=2000;  // Make the delay for the first animation shorter than the rest
+        idx === 0 ? delay=400 : delay=1500;  // Make the delay for the first animation shorter than the rest
 
         // resursive
         if (idx < introBannerElements.length) {
@@ -41,7 +41,6 @@ const introBannerAnimation = (() => {
                     // Enable scrolling and navigation links after the last animation is finsihed
                     document.body.style.overflow = "auto";
                     _enableNavLinks();
-                    console.log("YESSIR")
                 }
             }, delay);
         }

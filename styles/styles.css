@@ -161,6 +161,7 @@ a:active {
     padding: 1rem;
     font-size: 1.1rem;
     font-weight: bold;
+
     transition: transform 0.3s;
 }
 
@@ -187,7 +188,7 @@ a:active {
 
 .intro-banner p {
     opacity: 0;
-    transition: opacity 2.5s ease-in-out;
+    transition: opacity 1.5s ease-in-out;
 }
 
 .intro-banner p:first-child {
@@ -219,6 +220,7 @@ a:active {
     position: absolute;
     bottom: 3%;
     margin: 0 auto;
+
     transition: opacity 1s ease-in-out;
     animation: 2s bounce-down infinite normal;
     z-index: 2;
