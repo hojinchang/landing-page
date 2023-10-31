@@ -220,11 +220,11 @@ a:active {
     bottom: 3%;
     margin: 0 auto;
     transition: opacity 1s ease-in-out;
-    animation: 2s bounce infinite normal;
+    animation: 2s bounce-down infinite normal;
     z-index: 2;
 }
 
-@keyframes bounce {
+@keyframes bounce-down {
     0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 
     40% {transform: translateY(-30px);} 
     60% {transform: translateY(-15px);} 
@@ -489,8 +489,29 @@ a:active {
 /* Footer
 --------------------------------------------- */
 #footer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: var(--primary-colour);
     padding: 2rem;
+}
+
+#nav-up {
+    color: var(--accent-colour);
+    font-size: 32px;
+    padding: 1rem;
+}
+
+.nav-up-btn {
+    cursor: pointer;
+    animation: 2s bounce-up infinite normal;
+    z-index: 2;
+}
+
+@keyframes bounce-up {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 
+    40% {transform: translateY(-15px);} 
+    60% {transform: translateY(-30px);} 
 }
 
 .contact-me {
@@ -520,7 +541,7 @@ a:active {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 2rem;
+    gap: 1rem;
     margin-top: 2rem;
 }
 
@@ -529,7 +550,7 @@ a:active {
 }
 
 .social-media-container i {
-    font-size: 2rem;
+    font-size: 2.25rem;
     height: auto;
     color: var(--accent-colour)
 }
