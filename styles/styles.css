@@ -423,11 +423,7 @@ a:visited {
 }
 
 .project-article {
-    display: flex;
-    flex: 1 1 20rem;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    flex: 1;
     background-color: var(--primary-colour);
     line-height: 1.5;
     border-radius: 0.5rem;
@@ -438,6 +434,13 @@ a:visited {
 
     position: relative;
     overflow: hidden;
+}
+
+.project-article > a {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .project-article h2 {
@@ -478,7 +481,6 @@ a:visited {
     transform: translateY(0);
     opacity:  1;
 }
-
 
 .projects-container.swoop-left {
     animation: 1s swoop-left 1 normal ease-in-out;
