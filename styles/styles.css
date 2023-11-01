@@ -27,6 +27,10 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 :root {
     --text-colour: white;
     --primary-colour: #222324;
