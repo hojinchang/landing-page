@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Argentina</title>
+        <!-- Favicon links -->
+        <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+        <link rel="icon" type="image/png" sizes="512x512" href="images/favicon/android-chrome-512x512.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="images/favicon/android-chrome-192x192.png">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="msapplication-TileImage" content="images/favicon/mstile-310x310.png">
+        <meta name="msapplication-TileImage" content="images/favicon/mstile-310x150.png">
+        <meta name="msapplication-TileImage" content="images/favicon/mstile-150x150.png">
+        <meta name="msapplication-TileImage" content="images/favicon/mstile-144x144.png">
+        <meta name="msapplication-TileImage" content="images/favicon/mstile-70x70.png">
+        <meta name="msapplication-config" content="images/favicon/browserconfig.xml">
+        <link rel="manifest" href="images/favicon/site.webmanifest">
+        <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="theme-color" content="#ffffff">
+        <!-- Inter and Nanum Myeongjo Font Import -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Nanum+Myeongjo:wght@400;700;800&display=swap" rel="stylesheet">
+        <!-- Google Icons import -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined">
+        <!-- Font Awesome import -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- Style CSS -->
+        <link rel="stylesheet" href="styles/normalize-fwd.css">
+        <link rel="stylesheet" href="styles/style.css">
+
+        <script src="scripts/navigation.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <nav class="site-navigation" id="site-navigation">
+                <a href="index.html">
+                    <img class="logo" src="images/argentina-favicon.svg" alt="Argentina website favicon">
+                </a>
+
+                <button class="menu-toggle" aria-controls="header-menu" aria-expanded="false" aria-label="Menu Toggle">
+					<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24">
+						<title>Menu Icon</title>
+						<path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z"></path>
+					</svg>
+				</button>
+
+                <ul class="nav-menu" id="header-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="discover.html">Discover</a></li>
+                    <li><a href="food.html">Food</a></li>
+                    <li><a href="culture.html">Culture</a></li>
+                    <li><a href="credits.html">Credits</a></li>
+                </ul>
+            </nav>
+
+            <section class="hero-section">
+                <video autoplay loop muted playsinline aria-hidden="true">
+                    <source src="media/hero-video.mp4" type="video/mp4">
+                    Your browser does not support the video element.
+                </video>
+
+                <div class="section-banner">
+                    <h1>Argentina</h1>
+                </div>
+                <a class="nav-down-btn" href="#categories-section">
+                    <span id="nav-down" class="material-symbols-outlined">expand_more</span>
+                    <span class="screen-reader-text">Navigate down to main section</span>
+                </a>
+            </section>
+        </header>
+        <main>
+            <section id="categories-section" class="categories-section content-section">
+                <h2 class="page-main-heading">Explore Argentina</h2>
+                <div class="articles-container">
+                    <article class="category-article">
+                        <h3>Discover</h3>
+                        <img src="images/home/categories-discover.jpg" alt="Photo of mountain in Jujuy, Argentina">
+                        <div class="article-overlay">
+                            <a href="discover.html">View More</a>
+                        </div>
+                    </article>
+    
+                    <article class="category-article">
+                        <h3>Food</h3>
+                        <img src="images/home/categories-food.jpg" alt="Photo of Argentinian barbeque">
+                        <div class="article-overlay">
+                            <a href="food.html">View More</a>
+                        </div>
+                    </article>
+    
+                    <article class="category-article">
+                        <h3>Culture</h3>
+                        <img src="images/home/categories-culture.jpg" alt="Photo of Argentina Flag">
+                        <div class="article-overlay">
+                            <a href="culture.html">View More</a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <footer id="footer-section">
+            <a class="nav-up-btn" href="#">
+                <span id="nav-up" class="material-symbols-outlined">arrow_upward</span>
+                <span class="screen-reader-text">Navigate to top of page</span>
+            </a>
+
+            <div class="contact-me">
+                <p>Let's work together!</p>
+                <a href="mailto:hojinc1223@gmail.com">
+                    Contact Me
+                    <span class="screen-reader-text">Link to email address</span>
+                </a>
+            </div>
+
+            <div class="social-media-container">
+                <a href="https://github.com/hojinchang" target="_blank" rel="noopener noreferrer">
+                    <i class="fa fa-github"></i>
+                    <span class="screen-reader-text">Link to Github profile</span>
+                </a>
+                <a href="https://www.linkedin.com/in/hojin-chang-316084157/" target="_blank" rel="noopener noreferrer">
+                    <i class="fa fa-linkedin"></i>
+                    <span class="screen-reader-text">Link to Linkedin profile</span>
+                </a>
+            </div>
+            <p class="copyright">&copy; 2023 <span class="footer-name">Hojin Chang</span></p>
+        </footer>
+    </body>
+</html>
