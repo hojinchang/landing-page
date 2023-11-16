@@ -203,15 +203,15 @@ a:visited {
 }
 
 .intro-banner p:first-child {
-    font-size: 2.5rem;
+    font-size: 3rem;
 }
 
 .intro-banner p:nth-child(2) {
-    font-size: 1.7rem;
+    font-size: 2.2rem;
 }
 
 .intro-banner p:nth-child(3) {
-    font-size: 1.7rem;
+    font-size: 2.2rem;
 }
 
 .my-name {
