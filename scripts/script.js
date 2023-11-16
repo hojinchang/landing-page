@@ -1,9 +1,5 @@
 "use-strict";
 
-window.addEventListener("beforeunload", () => {
-    window.scrollTo(0, 0);
-})
-
 const introBannerAnimation = (() => {
     const introBannerElements = document.querySelectorAll(".intro-banner > *");
     const navigationLinks = document.querySelectorAll(".nav-menu a");
@@ -47,11 +43,11 @@ const introBannerAnimation = (() => {
     }
 
     // Make website unscrollable while animation is playing
-    document.body.style.overflow = "hidden";
-    _disableNavLinks();
+    // _disableNavLinks();
     _displayIntroBanner(0);
 
 })();
+
 
 // Scroll to About Me section if clicked
 const navDownBtn = document.querySelector(".nav-down-btn");
