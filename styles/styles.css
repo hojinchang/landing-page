@@ -203,15 +203,15 @@ a:visited {
 }
 
 .intro-banner p:first-child {
-    font-size: 4rem;
+    font-size: 2.5rem;
 }
 
 .intro-banner p:nth-child(2) {
-    font-size: 3rem;
+    font-size: 1.7rem;
 }
 
 .intro-banner p:nth-child(3) {
-    font-size: 2rem;
+    font-size: 1.7rem;
 }
 
 .my-name {
@@ -231,14 +231,8 @@ a:visited {
     position: relative;
 
     text-align: center;
+    bottom: -70%;
 
-    /* bottom: 30rem; */
-    /* left: 50%; */
-
-    bottom: -75%;
-
-    /* left: 50%;
-    transform: translateX(-50%); */
     transition: opacity 1s ease-in-out;
     animation: 2s bounce-down infinite normal;
     z-index: 2;
@@ -331,7 +325,19 @@ a:visited {
         gap: 2rem;
         margin: 0 2rem;
         box-shadow: none;
-        /* z-index: 2; */
+        z-index: 2;
+    }
+
+    .intro-banner p:first-child {
+        font-size: 4rem;
+    }
+    
+    .intro-banner p:nth-child(2) {
+        font-size: 3rem;
+    }
+    
+    .intro-banner p:nth-child(3) {
+        font-size: 3rem;
     }
 }
 
