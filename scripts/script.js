@@ -2,6 +2,8 @@
 
 const introBannerAnimation = (() => {
     const introBannerElements = document.querySelectorAll(".intro-banner > *");
+    const navDownButton = document.querySelector(".nav-down-btn");
+    const combinedElements = [...introBannerElements, navDownButton];
     const navigationLinks = document.querySelectorAll(".nav-menu a");
 
     const _disableNavigation = (e) => {
@@ -28,18 +30,19 @@ const introBannerAnimation = (() => {
         idx === 0 ? delay=400 : delay=1500;  // Make the delay for the first animation shorter than the rest
 
         // resursive
-        if (idx < introBannerElements.length) {
+        if (idx < combinedElements.length) {
             setTimeout(() => {
-                introBannerElements[idx].style.opacity = "1";
+                combinedElements[idx].style.opacity = "1";
                 _displayIntroBanner(idx + 1);
 
-                if (idx === (introBannerElements.length - 1)) {
+                if (idx === (combinedElements.length - 1)) {
                     // Enable scrolling and navigation links after the last animation is finsihed
                     document.body.style.overflow = "auto";
                     _enableNavLinks();
                 }
             }, delay);
         }
+
     }
 
     // Make website unscrollable while animation is playing
